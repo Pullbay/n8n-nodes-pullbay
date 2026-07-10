@@ -13,7 +13,8 @@
 	"license": "MIT",
 	"homepage": "",
 	"author": {
-		"name": "Pullbay"
+		"name": "Pullbay",
+		"email": "info@pullbay.com"
 	},
 	"main": "index.js",
 	"scripts": {
