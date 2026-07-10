@@ -1,0 +1,60 @@
+{
+	"name": "n8n-nodes-pullbay",
+	"version": "0.0.1",
+	"description": "n8n node for Pullbay API - App Store, Google Play, DuckDuckGo and more",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"pullbay",
+		"app-store",
+		"google-play",
+		"duckduckgo"
+	],
+	"license": "MIT",
+	"homepage": "",
+	"author": {
+		"name": "Pullbay"
+	},
+	"main": "index.js",
+	"scripts": {
+		"build": "n8n-node build",
+		"build:gulp": "tsc && gulp build:icons",
+		"dev": "n8n-node dev",
+		"format": "prettier nodes credentials --write",
+		"lint": "n8n-node lint",
+		"lintfix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Pullbay/n8n-nodes-pullbay.git"
+	},
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"credentials": [
+			"dist/credentials/PullbayApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Pullbay/Pullbay.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"@types/node": "^20.0.0",
+		"gulp": "^4.0.2",
+		"n8n-workflow": "*",
+		"prettier": "^3.0.0",
+		"typescript": "~5.3.0",
+		"eslint": "9.32.0"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
