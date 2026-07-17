@@ -25,7 +25,7 @@ export class PullbayApi implements ICredentialType {
 			displayName: 'Base URL',
 			name: 'baseUrl',
 			type: 'string',
-			default: 'https://dashboard.pullbay.com',
+			default: 'https://api.pullbay.com',
 			required: true,
 			description: 'The base URL of the Pullbay API',
 		},
@@ -43,7 +43,7 @@ export class PullbayApi implements ICredentialType {
 	test: ICredentialTestRequest = {
 		request: {
 			baseURL: '={{$credentials.baseUrl}}',
-			url: '/api/appstore/apps?appId=284882215',
+			url: '/appstore/apps?appId=284882215',
 			method: 'GET',
 		},
 	};

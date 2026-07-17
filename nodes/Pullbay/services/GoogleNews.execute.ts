@@ -18,7 +18,7 @@ export async function executeGoogleNews(
 		const qs: Record<string, string> = { category };
 		if (additionalFields.languageCode) qs.languageCode = additionalFields.languageCode;
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/google-news/category', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/google-news/category', qs);
 	}
 
 	if (operation === 'searchNews') {
@@ -31,7 +31,7 @@ export async function executeGoogleNews(
 		if (maxItems) qs.maxItems = maxItems;
 		if (resolveUrl !== 'no') qs.resolveUrl = resolveUrl;
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/google-news/search', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/google-news/search', qs);
 	}
 
 	throw new NodeOperationError(this.getNode(), `Unsupported operation: ${operation}`);

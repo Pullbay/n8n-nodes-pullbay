@@ -20,7 +20,7 @@ export async function executeYouTube(
 			qs.channelUrl = this.getNodeParameter('channelUrl', itemIndex) as string;
 		}
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/youtube/channel', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/youtube/channel', qs);
 	}
 
 	if (operation === 'fetchComments') {
@@ -39,7 +39,7 @@ export async function executeYouTube(
 			if (cursor) qs.cursor = cursor;
 		}
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/youtube/comments', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/youtube/comments', qs);
 	}
 
 	if (operation === 'fetchTrending') {
@@ -50,7 +50,7 @@ export async function executeYouTube(
 		const qs: Record<string, string> = {};
 		if (additionalFields.geo) qs.geo = additionalFields.geo;
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/youtube/trending', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/youtube/trending', qs);
 	}
 
 	if (operation === 'fetchVideo') {
@@ -62,7 +62,7 @@ export async function executeYouTube(
 		const qs: Record<string, string> = { id: videoId };
 		if (additionalFields.type) qs.type = additionalFields.type;
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/youtube/video', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/youtube/video', qs);
 	}
 
 	if (operation === 'fetchHashtag') {
@@ -79,7 +79,7 @@ export async function executeYouTube(
 			if (cursor) qs.cursor = cursor;
 		}
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/youtube/hashtag', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/youtube/hashtag', qs);
 	}
 
 	if (operation === 'search') {
@@ -112,7 +112,7 @@ export async function executeYouTube(
 		if (additionalFields.features) qs.features = additionalFields.features;
 		if (additionalFields.uploadDate) qs.uploadDate = additionalFields.uploadDate;
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/youtube/search', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/youtube/search', qs);
 	}
 
 	throw new NodeOperationError(this.getNode(), `Unsupported operation: ${operation}`);

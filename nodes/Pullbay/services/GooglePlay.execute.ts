@@ -20,7 +20,7 @@ export async function executeGooglePlay(
 		if (additionalFields.country) qs.country = additionalFields.country;
 		if (additionalFields.lang) qs.lang = additionalFields.lang;
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/google-play/apps', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/google-play/apps', qs);
 	}
 
 	if (operation === 'fetchDataSafety') {
@@ -28,7 +28,7 @@ export async function executeGooglePlay(
 
 		const qs: Record<string, string> = { appId };
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/google-play/data-safety', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/google-play/data-safety', qs);
 	}
 
 	if (operation === 'fetchPermissions') {
@@ -36,7 +36,7 @@ export async function executeGooglePlay(
 
 		const qs: Record<string, string> = { appId };
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/google-play/permissions', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/google-play/permissions', qs);
 	}
 
 	if (operation === 'fetchSimilarApps') {
@@ -44,7 +44,7 @@ export async function executeGooglePlay(
 
 		const qs: Record<string, string> = { appId };
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/google-play/similar', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/google-play/similar', qs);
 	}
 
 	if (operation === 'fetchReviews') {
@@ -64,7 +64,7 @@ export async function executeGooglePlay(
 			if (cursor) qs.cursor = cursor;
 		}
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/google-play/reviews', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/google-play/reviews', qs);
 	}
 
 	if (operation === 'searchApps') {
@@ -76,7 +76,7 @@ export async function executeGooglePlay(
 		if (additionalFields.lang) qs.lang = additionalFields.lang;
 		if (price && price !== 'all') qs.price = price;
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/google-play/search', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/google-play/search', qs);
 	}
 
 	throw new NodeOperationError(this.getNode(), `Unsupported operation: ${operation}`);
