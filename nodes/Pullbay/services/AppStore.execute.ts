@@ -24,7 +24,7 @@ export async function executeAppStore(
 		if (additionalFields.country) qs.country = additionalFields.country;
 		if (additionalFields.lang) qs.lang = additionalFields.lang;
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/appstore/apps', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/appstore/apps', qs);
 	}
 
 	if (operation === 'fetchDeveloper') {
@@ -33,7 +33,7 @@ export async function executeAppStore(
 		const qs: Record<string, string> = { developerId };
 		if (additionalFields.country) qs.country = additionalFields.country;
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/appstore/developer', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/appstore/developer', qs);
 	}
 
 	if (operation === 'fetchReviews') {
@@ -57,7 +57,7 @@ export async function executeAppStore(
 			if (page) qs.page = page;
 		}
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/appstore/reviews', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/appstore/reviews', qs);
 	}
 
 	if (operation === 'fetchSimilarApps') {
@@ -71,7 +71,7 @@ export async function executeAppStore(
 		if (additionalFields.country) qs.country = additionalFields.country;
 		if (additionalFields.lang) qs.lang = additionalFields.lang;
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/appstore/similar', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/appstore/similar', qs);
 	}
 
 	if (operation === 'searchApps') {
@@ -89,7 +89,7 @@ export async function executeAppStore(
 			if (page) qs.page = page;
 		}
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/appstore/search', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/appstore/search', qs);
 	}
 
 	throw new NodeOperationError(this.getNode(), `Unsupported operation: ${operation}`);

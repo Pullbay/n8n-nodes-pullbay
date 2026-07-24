@@ -4,10 +4,10 @@ import { NodeOperationError } from 'n8n-workflow';
 import { pullbayApiRequest } from '../GenericFunctions';
 
 const endpointMap: Record<string, string> = {
-	search: '/api/duckduckgo/search',
-	searchImages: '/api/duckduckgo/images',
-	searchNews: '/api/duckduckgo/news',
-	searchVideos: '/api/duckduckgo/videos',
+	search: '/duckduckgo/search',
+	searchImages: '/duckduckgo/images',
+	searchNews: '/duckduckgo/news',
+	searchVideos: '/duckduckgo/videos',
 };
 
 export async function executeDuckDuckGo(

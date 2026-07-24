@@ -31,7 +31,7 @@ export async function executeGoogleSearch(
 		if (additionalFields.hl) qs.hl = additionalFields.hl;
 		if (additionalFields.safe && additionalFields.safe === 'on') qs.safe = 'on';
 
-		return await pullbayApiRequest.call(this, 'GET', '/api/google-search/search', qs);
+		return await pullbayApiRequest.call(this, 'GET', '/google-search/search', qs);
 	}
 
 	throw new NodeOperationError(this.getNode(), `Unsupported operation: ${operation}`);

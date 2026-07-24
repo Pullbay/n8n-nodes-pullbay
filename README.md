@@ -6,11 +6,11 @@ Pullbay is a data API that gives you structured access to public data from the A
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
-[Installation](#installation)  
-[Operations](#operations)  
-[Credentials](#credentials)  
-[Compatibility](#compatibility)  
-[Usage](#usage)  
+[Installation](#installation)
+[Operations](#operations)
+[Credentials](#credentials)
+[Compatibility](#compatibility)
+[Usage](#usage)
 [Resources](#resources)
 
 ## Installation
@@ -86,7 +86,7 @@ You need a Pullbay account and an API key to use this node.
 1. Sign up at [Pullbay](https://pullbay.com) and obtain your API key from your dashboard.
 2. In n8n, create a new **Pullbay API** credential.
 3. Enter your **API Key**. The key is sent with each request via the `x-api-key` header.
-4. Optionally adjust the **Base URL** (defaults to `https://dashboard.pullbay.com`).
+4. Optionally adjust the **Base URL** (defaults to `https://api.pullbay.com`).
 
 See the [Pullbay documentation](https://docs.pullbay.com/) for more details.
 
