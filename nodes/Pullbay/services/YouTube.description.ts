@@ -389,13 +389,12 @@ export const youTubeFields: INodeProperties[] = [
 				displayName: 'Upload Date',
 				name: 'uploadDate',
 				type: 'options',
-				// eslint-disable-next-line n8n-nodes-base/node-param-options-type-unsorted-items
 				options: [
 					{ name: 'Last Hour', value: 'hour' },
-					{ name: 'Today', value: 'today' },
-					{ name: 'This Week', value: 'week' },
 					{ name: 'This Month', value: 'month' },
+					{ name: 'This Week', value: 'week' },
 					{ name: 'This Year', value: 'year' },
+					{ name: 'Today', value: 'today' },
 				],
 				default: 'week',
 				description: 'Filter by upload date',
