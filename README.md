@@ -56,7 +56,7 @@ The Pullbay node is organized into resources, each exposing a set of operations.
 
 - **Search** — Search the web via Google with country, language, and safe search options.
 
-### Google News
+### Google News Feed
 
 - **News By Category** — Get news articles by category (business, technology, sport, and more).
 - **Search News** — Search for news articles, with optional URL resolution.
@@ -88,7 +88,7 @@ You need a Pullbay account and an API key to use this node.
 3. Enter your **API Key**. The key is sent with each request via the `x-api-key` header.
 4. Optionally adjust the **Base URL** (defaults to `https://api.pullbay.com`).
 
-See the [Pullbay documentation](https://docs.pullbay.com/) for more details.
+See the [Pullbay documentation](https://docs.pullbay.com) for more details.
 
 ## Compatibility
 
@@ -108,4 +108,4 @@ If you're new to n8n, check out [Try it out](https://docs.n8n.io/try-it-out/) in
 
 - [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
 - [Pullbay Website](https://pullbay.com)
-- [Pullbay API Documentation](https://docs.pullbay.com/)
+- [Pullbay API Documentation](https://docs.pullbay.com)

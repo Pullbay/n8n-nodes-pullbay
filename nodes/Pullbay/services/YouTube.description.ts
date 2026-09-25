@@ -46,8 +46,7 @@ export const youTubeOperations: INodeProperties[] = [
 				name: 'Search',
 				value: 'search',
 				description: 'Search YouTube',
-				// eslint-disable-next-line n8n-nodes-base/node-param-operation-option-action-miscased
-				action: 'Search YouTube',
+				action: 'Search videos',
 			},
 		],
 		default: 'fetchChannel',
