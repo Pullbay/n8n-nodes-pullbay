@@ -25,7 +25,10 @@ export class Pullbay implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Pullbay',
 		name: 'pullbay',
-		icon: 'file:pullbay.svg',
+		icon: {
+			light: 'file:pullbay.svg',
+			dark: 'file:pullbay.dark.svg',
+		},
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["resource"] + ": " + $parameter["operation"]}}',
@@ -58,8 +61,7 @@ export class Pullbay implements INodeType {
 						value: 'duckDuckGo',
 					},
 					{
-						// eslint-disable-next-line n8n-nodes-base/node-param-resource-with-plural-option
-						name: 'Google News',
+						name: 'Google News Feed',
 						value: 'googleNews',
 					},
 					{

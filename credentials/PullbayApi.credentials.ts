@@ -9,8 +9,11 @@ import type {
 export class PullbayApi implements ICredentialType {
 	name = 'pullbayApi';
 	displayName = 'Pullbay API';
-	icon: Icon = 'file:../nodes/Pullbay/pullbay.svg';
-	documentationUrl = 'https://pullbay.com/docs';
+	icon: Icon = {
+		light: 'file:../nodes/Pullbay/pullbay.svg',
+		dark: 'file:../nodes/Pullbay/pullbay.dark.svg',
+	};
+	documentationUrl = 'https://docs.pullbay.com';
 
 	properties: INodeProperties[] = [
 		{

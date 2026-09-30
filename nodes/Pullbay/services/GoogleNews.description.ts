@@ -9,8 +9,7 @@ const languageCodeOptions = [
 	{ name: 'বাংলা (বাংলাদেশ)', value: 'BD:bn' },
 	{ name: 'বাংলা (ভারত)', value: 'IN:bn' },
 	{ name: 'Български (България)', value: 'BG:bg' },
-	// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-	{ name: 'Čeština (Česko)', value: 'CZ:cs' },
+	{ name: 'Czech (Czechia)', value: 'CZ:cs' },
 	{ name: 'Deutsch (Deutschland)', value: 'DE:de' },
 	{ name: 'Deutsch (Österreich)', value: 'AT:de' },
 	{ name: 'Deutsch (Schweiz)', value: 'CH:de' },
